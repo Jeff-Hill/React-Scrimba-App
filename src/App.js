@@ -1,35 +1,54 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Header from "./components/Header"
-import MainContent from "./components/MainContent"
-import Footer from "./components/Footer"
+import ToDoItem from './components/ToDoItem';
+import ContactCard from './components/ContactCard';
+// import Header from "./components/Header"
+// import MainContent from "./components/MainContent"
+// import Footer from "./components/Footer"
 
 
 function App() {
   return (
-      <div className="App">
-        <h1>To Do List</h1>
-          <div className="App-header">
-            <label htmlFor="task_one">Task One</label>
-            <input name="task_one" type="checkbox"/>
-            <p>Placeholder Text</p>
-
-            <label htmlFor="task_two">Task Two</label>
-            <input name="task_two" type="checkbox"/>
-            <p>Placeholder Text</p>
-
-            <label htmlFor="task_three">Task Three</label>
-            <input name="task_three" type="checkbox"/>
-            <p>Placeholder Text</p>
-
-            <label htmlFor="task_four">Task Four</label>
-            <input name="task_four" type="checkbox"/>
-            <p>Placeholder Text</p>
-          </div>
-
+      <div >
+        <div className="todo-list">
+          <h1>To Do List</h1>
+          <ToDoItem />
+          <ToDoItem />
+          <ToDoItem />
+          <ToDoItem />
+        </div>
+        <div>
+          <ContactCard contact={{
+            imgURL:"https://boygeniusreport.files.wordpress.com/2016/11/puppy-dog.jpg?quality=98&strip=all&w=782",
+            name: "Little Pup",
+            phone: "615-234-3457",
+            email: "goldenpups@gmail.com"}}/>
+          <ContactCard contact={{
+            imgURL:"https://www.petmd.com/sites/default/files/petmd-puppy-weight.jpg",
+            name: "Beagle Pup",
+            phone: "615-987-9875",
+            email: "beaglepup@gmail.com"}} />
+          <ContactCard contact={{
+            imgURL:"https://www.petmd.com/sites/default/files/petmd-shaking-puppy.jpg",
+            name: "Berniese Pup",
+            phone: "615-248-8754",
+            email: "berniesepup@gmail.com"}}/>
+          <ContactCard contact={{
+            imgURL:"https://assets3.thrillist.com/v1/image/2754967/size/tmg-article_tall;jpeg_quality=20.jpg",
+            name: "Dalmatian Pup",
+            phone: "615-985-5643",
+            email: "dalmatianpup@gmail.com"}}/>
+        </div>
 
       </div>
+
+
+
+
+
+
+
     // <div>
     //   < Header />
     //   < MainContent />
