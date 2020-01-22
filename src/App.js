@@ -3,20 +3,25 @@ import React from 'react';
 import './App.css';
 import ToDoItem from './components/ToDoItem';
 import ContactCard from './components/ContactCard';
+import Product from './components/Product'
+import products from './schoolProducts'
+import todoData from './todoData'
 // import Header from "./components/Header"
 // import MainContent from "./components/MainContent"
 // import Footer from "./components/Footer"
 
 
 function App() {
+  const productComponents = products.map(item => <Product key={item.id} product={item} />)
+  const todoComponents = todoData.map(task => <ToDoItem key={task.id} task={task} /> )
   return (
       <div >
+        <div>
+          {productComponents}
+        </div>
         <div className="todo-list">
           <h1>To Do List</h1>
-          <ToDoItem />
-          <ToDoItem />
-          <ToDoItem />
-          <ToDoItem />
+          {todoComponents}
         </div>
         <div>
           <ContactCard contact={{
