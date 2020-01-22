@@ -1,12 +1,14 @@
 import React from "react"
 
-function ToDoItem () {
+function ToDoItem (props) {
     return (
         <div className="todo-item">
 
-                <label htmlFor="task">Task</label>
+                <label htmlFor="task">
+                    {props.task.taskName}
+                </label>
                 <input name="task" type="checkbox"/>
-                <p>Placeholder Text</p>
+                <p>{props.task.taskDescription} will take {props.task.taskTimeLimit}</p>
 
 
         </div>
